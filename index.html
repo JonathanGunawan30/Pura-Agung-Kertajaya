@@ -1,62 +1,323 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pura Agung Kertajaya</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pura Agung Kertajaya — Company Profile</title>
+    <meta name="description" content="Profil resmi Pura Agung Kertajaya: sejarah, fasilitas, galeri, dan informasi kontak." />
+    <meta name="theme-color" content="#0c0a09" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pura Agung Kertajaya — Company Profile</title>
+    <meta name="description" content="Profil resmi Pura Agung Kertajaya: sejarah, fasilitas, galeri, dan informasi kontak." />
+    <meta name="theme-color" content="#0c0a09" />
+    
+    <meta property="og:title" content="Pura Agung Kertajaya — Company Profile" />
+    <meta property="og:description" content="Profil resmi Pura Agung Kertajaya: sejarah, fasilitas, galeri, dan informasi kontak." />
+    <meta property="og:image" content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/puraAgungKertajaya-EblGcDWMK96UWY2dTPV7BVzSOqN2JE.jpg" />
+    <meta property="og:url" content="#" /> <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pura Agung Kertajaya — Company Profile">
+    <meta name="twitter:description" content="Profil resmi Pura Agung Kertajaya: sejarah, fasilitas, galeri, dan informasi kontak.">
+    <meta name="twitter:image" content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/puraAgungKertajaya-EblGcDWMK96UWY2dTPV7BVzSOqN2JE.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      :root {
+        --brand: #d97706;
+        --brand-dark: #b45309;
+        --ink: #0c0a09;
+        --ink-2: #1c1917;
+        --soft: #e7e5e4;
+        --white: #ffffff;
+      }
+      .brand-bg { background-color: var(--brand); }
+      .brand-bg:hover { background-color: var(--brand-dark); }
+      .ink { color: var(--ink); }
+      .ink-bg { background-color: var(--ink); }
+      .ink-2-bg { background-color: var(--ink-2); }
+      .soft { color: var(--soft); }
+      .soft-bg { background-color: var(--soft); }
+      .brand { color: var(--brand); }
+      .focus-ring:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
 
-        body, html {
-            height: 100%;
-            width: 100%;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .hero {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            background: url('puraAgungKertajaya.jpg') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.45);
-        }
-
-        h1 {
-            position: relative;
-            color: #fff;
-            font-size: clamp(2rem, 5vw, 4rem);
-            text-align: center;
-            letter-spacing: 2px;
-            z-index: 2;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-                padding: 0 20px;
-            }
-        }
+      @keyframes marqueeScroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+      .marquee {
+        display: flex;
+        width: max-content;
+        animation: marqueeScroll 40s linear infinite;
+      }
+      .marquee:hover {
+        animation-play-state: paused;
+      }
     </style>
 </head>
-<body>
-    <div class="hero">
-        <div class="overlay"></div>
-        <h1>Pura Agung Kertajaya</h1>
-    </div>
+
+<body class="antialiased text-base text-stone-700 bg-white overflow-x-hidden">
+    <a href="#konten" class="sr-only focus:not-sr-only focus-ring absolute left-2 top-2 z-50 bg-white px-3 py-1 rounded">
+      Lompat ke konten utama
+    </a>
+
+    <header class="ink-bg text-white sticky top-0 z-40 shadow-sm">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#" class="flex items-center gap-3 focus-ring">
+            <span class="inline-block h-8 w-8 rounded-full brand-bg"></span>
+            <span class="font-semibold tracking-wide text-white">Pura Agung Kertajaya</span>
+          </a>
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded focus-ring" aria-expanded="false" aria-controls="menu">
+            <span class="sr-only">Buka menu</span>
+            <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <ul id="menu" class="hidden md:flex items-center gap-6">
+            <li><a class="hover:text-amber-400 focus-ring" href="#tentang">Tentang</a></li>
+            <li><a class="hover:text-amber-400 focus-ring" href="#fasilitas">Fasilitas</a></li>
+            <li><a class="hover:text-amber-400 focus-ring" href="#galeri">Galeri</a></li>
+            <li><a class="hover:text-amber-400 focus-ring" href="#jadwal">Jadwal</a></li>
+            <li><a class="hover:text-amber-400 focus-ring" href="#kontak">Kontak</a></li>
+            <li><a href="#kontak" class="ml-2 inline-flex items-center rounded-md px-4 py-2 text-sm font-medium brand-bg text-white shadow hover:shadow-md focus-ring">Kunjungi Kami</a></li>
+          </ul>
+        </div>
+        <ul id="menuMobile" class="md:hidden hidden border-t border-stone-800">
+          <li><a class="block px-4 py-3 hover:bg-stone-900" href="#tentang">Tentang</a></li>
+          <li><a class="block px-4 py-3 hover:bg-stone-900" href="#fasilitas">Fasilitas</a></li>
+          <li><a class="block px-4 py-3 hover:bg-stone-900" href="#galeri">Galeri</a></li>
+          <li><a class="block px-4 py-3 hover:bg-stone-900" href="#jadwal">Jadwal</a></li>
+          <li><a class="block px-4 py-3 hover:bg-stone-900" href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section aria-label="Sampul" class="relative">
+      <div class="relative h-screen overflow-hidden">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/puraAgungKertajaya-EblGcDWMK96UWY2dTPV7BVzSOqN2JE.jpg" alt="Gerbang Pura Agung Kertajaya" class="h-full w-full object-cover" loading="eager" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/10"></div>
+        <div class="absolute inset-0 flex items-end md:items-center">
+          <div class="mx-auto max-w-7xl px-6 pb-20 md:pb-0">
+            <h1 class="text-pretty text-4xl md:text-5xl font-bold text-white drop-shadow" data-aos="fade-up">Pura Agung Kertajaya</h1>
+            <p class="mt-3 max-w-2xl text-stone-200 leading-relaxed" data-aos="fade-up" data-aos-delay="200">Pusat kegiatan rohani dan kebudayaan Hindu dengan nilai-nilai dharma, harmoni, dan pelayanan umat.</p>
+            <div class="mt-6 flex items-center gap-3" data-aos="fade-up" data-aos-delay="400">
+              <a href="#tentang" class="brand-bg text-white px-5 py-2.5 rounded-md font-medium shadow hover:shadow-lg focus-ring">Pelajari Lebih Lanjut</a>
+              <a href="#galeri" class="px-5 py-2.5 rounded-md font-medium bg-white/10 text-white backdrop-blur hover:bg-white/20 focus-ring">Lihat Galeri</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main id="konten">
+      <section id="tentang" class="py-16 md:py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+            <div data-aos="fade-right">
+              <h2 class="text-2xl md:text-3xl font-semibold ink">Tentang Pura</h2>
+              <p class="mt-4 leading-relaxed">Pura Agung Kertajaya merupakan tempat ibadah Hindu yang berdiri sebagai simbol keteduhan, pengabdian, dan pelestarian budaya. Di sini, umat melaksanakan pemujaan, yadnya, serta berbagai kegiatan sosial dan edukasi keagamaan.</p>
+              <p class="mt-3 leading-relaxed">Kami berkomitmen untuk menghadirkan lingkungan yang bersih, tertib, dan ramah, sehingga seluruh rangkaian upacara dan aktivitas dapat berlangsung khusyuk serta bermakna bagi seluruh umat.</p>
+              <dl class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="rounded-lg border border-stone-200 p-4"><dt class="text-sm text-stone-500">Nilai Utama</dt><dd class="mt-1 font-medium ink">Dharma & Harmoni</dd></div>
+                <div class="rounded-lg border border-stone-200 p-4"><dt class="text-sm text-stone-500">Pelayanan</dt><dd class="mt-1 font-medium ink">Untuk Umat</dd></div>
+                <div class="rounded-lg border border-stone-200 p-4"><dt class="text-sm text-stone-500">Budaya</dt><dd class="mt-1 font-medium ink">Pelestarian Adat</dd></div>
+              </dl>
+            </div>
+            <figure class="relative" data-aos="fade-left">
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bangunan-utama-Nn8vVEbefNv7VqjHjIZ3OnJ11kGq0G.jpg" alt="Bangunan utama Pura Agung Kertajaya" class="w-full rounded-lg shadow object-cover" loading="lazy" />
+              <figcaption class="mt-2 text-sm text-stone-500">Bangunan utama di pelataran tengah.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="ulasan" class="py-16 bg-stone-50 border-y border-stone-200">
+          <div class="mx-auto max-w-7xl px-6 text-center" data-aos="fade-up">
+              <h2 class="text-2xl md:text-3xl font-semibold ink">Apa Kata Mereka</h2>
+              <p class="mt-2 text-stone-600 max-w-2xl mx-auto">Kesan tulus dari para pengunjung yang telah merasakan kedamaian di Pura Agung Kertajaya.</p>
+          </div>
+          <div class="relative mt-8 overflow-hidden">
+              <div class="hidden md:block absolute left-0 top-0 bottom-0 z-10 w-24 bg-gradient-to-r from-stone-50 to-transparent"></div>
+              
+              <div class="marquee flex gap-6">
+                  <div class="flex-shrink-0 w-[320px] bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
+                      <div class="flex items-center gap-4"><img src="https://picsum.photos/id/237/200" alt="Foto Profil Budi" class="h-12 w-12 rounded-full object-cover"><div><p class="font-semibold ink">Budi Santoso</p><p class="text-amber-500">⭐⭐⭐⭐⭐</p></div></div>
+                      <p class="mt-3 text-sm text-stone-600">"Tempatnya sangat tenang dan bersih. Cocok sekali untuk menenangkan diri dan beribadah dengan khusyuk."</p>
+                  </div>
+                  <div class="flex-shrink-0 w-[320px] bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
+                      <div class="flex items-center gap-4"><img src="https://picsum.photos/id/238/200" alt="Foto Profil Citra" class="h-12 w-12 rounded-full object-cover"><div><p class="font-semibold ink">Citra Lestari</p><p class="text-amber-500">⭐⭐⭐⭐⭐</p></div></div>
+                      <p class="mt-3 text-sm text-stone-600">"Sangat terawat, pengurusnya ramah dan sangat membantu. Suasananya membuat hati damai."</p>
+                  </div>
+                  <div class="flex-shrink-0 w-[320px] bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
+                      <div class="flex items-center gap-4"><img src="https://picsum.photos/id/239/200" alt="Foto Profil Eko" class="h-12 w-12 rounded-full object-cover"><div><p class="font-semibold ink">Eko Prasetyo</p><p class="text-amber-500">⭐⭐⭐⭐⭐</p></div></div>
+                      <p class="mt-3 text-sm text-stone-600">"Arsitektur Balinya kental, sungguh indah. Pengalaman spiritual yang tak terlupakan bagi saya dan keluarga."</p>
+                  </div>
+                  <div class="flex-shrink-0 w-[320px] bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
+                      <div class="flex items-center gap-4"><img src="https://picsum.photos/id/240/200" alt="Foto Profil Dewi" class="h-12 w-12 rounded-full object-cover"><div><p class="font-semibold ink">Dewi Anggraini</p><p class="text-amber-500">⭐⭐⭐⭐⭐</p></div></div>
+                      <p class="mt-3 text-sm text-stone-600">"Fasilitasnya lengkap dan sangat terjaga kebersihannya. Parkiran juga cukup luas untuk mobil."</p>
+                  </div>
+                   <div class="flex-shrink-0 w-[320px] bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
+                      <div class="flex items-center gap-4"><img src="https://picsum.photos/id/241/200" alt="Foto Profil Made" class="h-12 w-12 rounded-full object-cover"><div><p class="font-semibold ink">I Made Sutama</p><p class="text-amber-500">⭐⭐⭐⭐⭐</p></div></div>
+                      <p class="mt-3 text-sm text-stone-600">"Sebagai perantau, pura ini menjadi rumah kedua untuk beribadah. Terima kasih untuk para pengurus."</p>
+                  </div>
+
+                  <div class="flex-shrink-0 w-[320px] bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
+                      <div class="flex items-center gap-4"><img src="https://picsum.photos/id/237/200" alt="Foto Profil Budi" class="h-12 w-12 rounded-full object-cover"><div><p class="font-semibold ink">Budi Santoso</p><p class="text-amber-500">⭐⭐⭐⭐⭐</p></div></div>
+                      <p class="mt-3 text-sm text-stone-600">"Tempatnya sangat tenang dan bersih. Cocok sekali untuk menenangkan diri dan beribadah dengan khusyuk."</p>
+                  </div>
+                  <div class="flex-shrink-0 w-[320px] bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
+                      <div class="flex items-center gap-4"><img src="https://picsum.photos/id/238/200" alt="Foto Profil Citra" class="h-12 w-12 rounded-full object-cover"><div><p class="font-semibold ink">Citra Lestari</p><p class="text-amber-500">⭐⭐⭐⭐⭐</p></div></div>
+                      <p class="mt-3 text-sm text-stone-600">"Sangat terawat, pengurusnya ramah dan sangat membantu. Suasananya membuat hati damai."</p>
+                  </div>
+                  <div class="flex-shrink-0 w-[320px] bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
+                      <div class="flex items-center gap-4"><img src="https://picsum.photos/id/239/200" alt="Foto Profil Eko" class="h-12 w-12 rounded-full object-cover"><div><p class="font-semibold ink">Eko Prasetyo</p><p class="text-amber-500">⭐⭐⭐⭐⭐</p></div></div>
+                      <p class="mt-3 text-sm text-stone-600">"Arsitektur Balinya kental, sungguh indah. Pengalaman spiritual yang tak terlupakan bagi saya dan keluarga."</p>
+                  </div>
+                  <div class="flex-shrink-0 w-[320px] bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
+                      <div class="flex items-center gap-4"><img src="https://picsum.photos/id/240/200" alt="Foto Profil Dewi" class="h-12 w-12 rounded-full object-cover"><div><p class="font-semibold ink">Dewi Anggraini</p><p class="text-amber-500">⭐⭐⭐⭐⭐</p></div></div>
+                      <p class="mt-3 text-sm text-stone-600">"Fasilitasnya lengkap dan sangat terjaga kebersihannya. Parkiran juga cukup luas untuk mobil."</p>
+                  </div>
+                   <div class="flex-shrink-0 w-[320px] bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
+                      <div class="flex items-center gap-4"><img src="https://picsum.photos/id/241/200" alt="Foto Profil Made" class="h-12 w-12 rounded-full object-cover"><div><p class="font-semibold ink">I Made Sutama</p><p class="text-amber-500">⭐⭐⭐⭐⭐</p></div></div>
+                      <p class="mt-3 text-sm text-stone-600">"Sebagai perantau, pura ini menjadi rumah kedua untuk beribadah. Terima kasih untuk para pengurus."</p>
+                  </div>
+              </div>
+              
+              <div class="hidden md:block absolute right-0 top-0 bottom-0 z-10 w-24 bg-gradient-to-l from-stone-50 to-transparent"></div>
+          </div>
+      </section>
+
+      <section id="fasilitas" class="py-16 md:py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="flex items-end justify-between gap-4" data-aos="fade-up">
+            <h2 class="text-2xl md:text-3xl font-semibold ink">Fasilitas</h2>
+            <span class="hidden md:inline-flex items-center text-sm px-3 py-1 rounded-full bg-amber-100 text-amber-700">Terawat & Tertata</span>
+          </div>
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-xl border border-stone-200 bg-white overflow-hidden" data-aos="fade-up" data-aos-delay="100"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/aula-utama-umhTyuzruYuuOl0nMU7js5dP7J0iOh.jpg" alt="Aula utama untuk kegiatan umat" class="h-40 w-full object-cover" /><div class="p-4"><h3 class="font-semibold ink">Aula Utama</h3><p class="mt-1 text-sm leading-relaxed">Ruang serbaguna untuk pertemuan, latihan, dan upacara pendukung.</p></div></article>
+            <article class="rounded-xl border border-stone-200 bg-white overflow-hidden" data-aos="fade-up" data-aos-delay="200"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/taman-QCptRdjy8wmWsCpbham83OUhJwU1dZ.jpg" alt="Area taman teduh di dalam kompleks pura" class="h-40 w-full object-cover" /><div class="p-4"><h3 class="font-semibold ink">Taman</h3><p class="mt-1 text-sm leading-relaxed">Area hijau yang teduh untuk beristirahat dan menenangkan diri.</p></div></article>
+            <article class="rounded-xl border border-stone-200 bg-white overflow-hidden" data-aos="fade-up" data-aos-delay="300"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tempat-cuci-tangan-qZ435rs6ASUnCMmBflIFrJWLlPCUHh.jpg" alt="Tempat cuci tangan/pembersihan" class="h-40 w-full object-cover" /><div class="p-4"><h3 class="font-semibold ink">Tempat Penyucian</h3><p class="mt-1 text-sm leading-relaxed">Fasilitas pembersihan sebagai wujud kesucian sebelum sembahyang.</p></div></article>
+            <article class="rounded-xl border border-stone-200 bg-white overflow-hidden" data-aos="fade-up" data-aos-delay="400"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dewa-ganesha-04reBOcYrp8X7YXMnZ2lvX6KNh2663.jpg" alt="Patung Dewa Ganesha" class="h-40 w-full object-cover" /><div class="p-4"><h3 class="font-semibold ink">Pelinggih & Pratima</h3><p class="mt-1 text-sm leading-relaxed">Patung suci dan pelinggih yang dirawat dengan penuh hormat.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeri" class="py-16 md:py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div data-aos="fade-up">
+            <h2 class="text-2xl md:text-3xl font-semibold ink">Galeri</h2>
+            <p class="mt-2 text-stone-600">Koleksi foto suasana pura. Anda dapat memperbarui gambar sesuai kebutuhan.</p>
+          </div>
+          <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <figure data-aos="fade-up" data-aos-delay="100"><img data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/puraAgungKertajaya-EblGcDWMK96UWY2dTPV7BVzSOqN2JE.jpg" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/puraAgungKertajaya-EblGcDWMK96UWY2dTPV7BVzSOqN2JE.jpg" alt="Gerbang candi bentar" class="gallery-item w-full h-56 object-cover rounded-lg cursor-zoom-in" loading="lazy" /><figcaption class="mt-2 text-sm text-stone-500">Candi Bentar</figcaption></figure>
+            <figure data-aos="fade-up" data-aos-delay="200"><img data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bangunan-utama-Nn8vVEbefNv7VqjHjIZ3OnJ11kGq0G.jpg" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bangunan-utama-Nn8vVEbefNv7VqjHjIZ3OnJ11kGq0G.jpg" alt="Bangunan utama pura" class="gallery-item w-full h-56 object-cover rounded-lg cursor-zoom-in" loading="lazy" /><figcaption class="mt-2 text-sm text-stone-500">Bangunan Utama</figcaption></figure>
+            <figure data-aos="fade-up" data-aos-delay="300"><img data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dewa-ganesha-04reBOcYrp8X7YXMnZ2lvX6KNh2663.jpg" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dewa-ganesha-04reBOcYrp8X7YXMnZ2lvX6KNh2663.jpg" alt="Patung Dewa Ganesha" class="gallery-item w-full h-56 object-cover rounded-lg cursor-zoom-in" loading="lazy" /><figcaption class="mt-2 text-sm text-stone-500">Pratima Ganesha</figcaption></figure>
+            <figure data-aos="fade-up" data-aos-delay="400"><img data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tempat-cuci-tangan-qZ435rs6ASUnCMmBflIFrJWLlPCUHh.jpg" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tempat-cuci-tangan-qZ435rs6ASUnCMmBflIFrJWLlPCUHh.jpg" alt="Tempat penyucian" class="gallery-item w-full h-56 object-cover rounded-lg cursor-zoom-in" loading="lazy" /><figcaption class="mt-2 text-sm text-stone-500">Tempat Penyucian</figcaption></figure>
+            <figure data-aos="fade-up" data-aos-delay="500"><img data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/aula-utama-umhTyuzruYuuOl0nMU7js5dP7J0iOh.jpg" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/aula-utama-umhTyuzruYuuOl0nMU7js5dP7J0iOh.jpg" alt="Aula utama kegiatan" class="gallery-item w-full h-56 object-cover rounded-lg cursor-zoom-in" loading="lazy" /><figcaption class="mt-2 text-sm text-stone-500">Aula Utama</figcaption></figure>
+            <figure data-aos="fade-up" data-aos-delay="600"><img data-full="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/taman-QCptRdjy8wmWsCpbham83OUhJwU1dZ.jpg" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/taman-QCptRdjy8wmWsCpbham83OUhJwU1dZ.jpg" alt="Taman dan area duduk" class="gallery-item w-full h-56 object-cover rounded-lg cursor-zoom-in" loading="lazy" /><figcaption class="mt-2 text-sm text-stone-500">Taman</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="jadwal" class="py-16 md:py-20 bg-stone-50">
+        <div class="mx-auto max-w-7xl px-6">
+          <div data-aos="fade-up">
+            <h2 class="text-2xl md:text-3xl font-semibold ink">Jadwal Kegiatan</h2>
+            <p class="mt-2 text-stone-600">Contoh jadwal—silakan sesuaikan sesuai kalender upacara setempat.</p>
+          </div>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="rounded-lg border border-stone-200 bg-white p-5" data-aos="fade-up" data-aos-delay="100"><h3 class="font-semibold ink">Piodalan</h3><p class="mt-1 text-sm text-stone-600">Setiap 210 hari (kalender wuku), prosesi upacara piodalan di pelinggih utama.</p><p class="mt-2 text-sm"><span class="font-medium brand">Waktu:</span> 06.00–12.00 WIB</p></article>
+            <article class="rounded-lg border border-stone-200 bg-white p-5" data-aos="fade-up" data-aos-delay="200"><h3 class="font-semibold ink">Sembahyang Rutin</h3><p class="mt-1 text-sm text-stone-600">Sembahyang bersama pada hari suci seperti Purnama & Tilem.</p><p class="mt-2 text-sm"><span class="font-medium brand">Waktu:</span> 18.30–20.00 WIB</p></article>
+            <article class="rounded-lg border border-stone-200 bg-white p-5" data-aos="fade-up" data-aos-delay="300"><h3 class="font-semibold ink">Latihan Tari/Gamelan</h3><p class="mt-1 text-sm text-stone-600">Kegiatan seni dan budaya untuk pelestarian adat.</p><p class="mt-2 text-sm"><span class="font-medium brand">Lokasi:</span> Aula Utama</p></article>
+          </div>
+        </div>
+      </section>
+      
+      <section id="kontak" class="py-16 md:py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid md:grid-cols-2 gap-10">
+            <div data-aos="fade-right">
+              <h2 class="text-2xl md:text-3xl font-semibold ink">Kontak & Lokasi</h2>
+              <p class="mt-3 leading-relaxed">Untuk informasi pelayanan, jadwal upacara, dan penggunaan fasilitas, silakan hubungi pengurus atau kunjungi kami di alamat berikut.</p>
+              <ul class="mt-6 space-y-3">
+                <li><span class="font-medium ink">Alamat:</span> <span>Jl. Ks. Tubun Dalam No.108, RT.004/RW.004, Koang Jaya, Kec. Karawaci, Kota Tangerang, Banten 15112</span></li>
+                <li><span class="font-medium ink">Telepon:</span> <a class="brand hover:underline" href="tel:+62xxxxxxxxxx">+62 xxxxx-xxxxx</a></li>
+                <li><span class="font-medium ink">Email:</span> <a class="brand hover:underline" href="mailto:info@puraagungkertajaya.id">email@belumada.com</a></li>
+                <li><span class="font-medium ink">Jam Kunjungan:</span> 06.00–20.00 WIB (menyesuaikan hari suci)</li>
+              </ul>
+              <div class="mt-6"><a href="#galeri" class="inline-flex items-center rounded-md px-4 py-2 brand-bg text-white shadow hover:shadow-md focus-ring">Lihat Suasana Pura</a></div>
+            </div>
+
+            <div class="rounded-lg border border-stone-200 p-2 overflow-hidden" data-aos="fade-left">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7236894546927!2d106.62680867586765!3d-6.167743360445677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f8cb39503807%3A0x8d51b88692330d40!2sPura%20Agung%20Kertajaya!5e0!3m2!1sid!2sid!4v1759824914627!5m2!1sid!2sid" class="w-full h-full min-h-[350px] md:min-h-0 rounded-md" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="ink-bg text-stone-300">
+      <div class="mx-auto max-w-7xl px-6 py-10">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div><h3 class="font-semibold text-white">Pura Agung Kertajaya</h3><p class="mt-2 text-sm text-stone-400 leading-relaxed">Menjaga kesucian, merawat harmoni, dan melayani umat.</p></div>
+          <div>
+            <h4 class="font-semibold text-white">Tautan</h4>
+            <ul class="mt-2 space-y-2 text-sm">
+              <li><a class="hover:text-amber-400" href="#tentang">Tentang</a></li><li><a class="hover:text-amber-400" href="#fasilitas">Fasilitas</a></li><li><a class="hover:text-amber-400" href="#galeri">Galeri</a></li><li><a class="hover:text-amber-400" href="#jadwal">Jadwal</a></li><li><a class="hover:text-amber-400" href="#kontak">Kontak</a></li>
+            </ul>
+          </div>
+          <div><h4 class="font-semibold text-white">Catatan Pengunjung</h4><p class="mt-2 text-sm text-stone-400">Mohon mengenakan pakaian sopan, menjaga kebersihan, dan menghormati jalannya upacara.</p></div>
+        </div>
+        <div class="mt-8 border-t border-stone-800 pt-6 text-sm text-stone-500 flex flex-col md:flex-row items-center justify-between gap-2">
+          <p>© <span id="year"></span> Pura Agung Kertajaya. Semua hak cipta dilindungi.</p>
+          <p>Didesain dengan sepenuh hati oleh Mahasiswa Universitas Buddhi Dharma.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const menuMobile = document.getElementById('menuMobile');
+      if (menuBtn && menuMobile) {
+        menuBtn.addEventListener('click', () => {
+          const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+          menuBtn.setAttribute('aria-expanded', String(!expanded));
+          menuMobile.classList.toggle('hidden');
+        });
+      }
+
+      const items = document.querySelectorAll('.gallery-item');
+      const lightbox = document.createElement('div');
+      lightbox.id = "lightbox";
+      lightbox.className = "hidden fixed inset-0 z-50 bg-black/90 p-4 md:p-8";
+      lightbox.innerHTML = `
+        <button id="lightboxClose" class="absolute right-4 top-4 text-white/90 hover:text-white focus-ring" aria-label="Tutup">
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="h-full w-full grid place-items-center">
+          <img id="lightboxImg" src="" alt="Pratinjau gambar galeri" class="max-h-full max-w-full object-contain rounded-lg shadow-lg" />
+        </div>
+      `;
+      document.body.appendChild(lightbox);
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxClose = document.getElementById('lightboxClose');
+      items.forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.getAttribute('data-full') || img.src;
+          lightbox.classList.remove('hidden');
+        });
+      });
+      lightboxClose.addEventListener('click', () => lightbox.classList.add('hidden'));
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.add('hidden'); });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
 </body>
 </html>
